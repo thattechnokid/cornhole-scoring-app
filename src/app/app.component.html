@@ -1,0 +1,85 @@
+<div class="ui grid container scores">
+    <div class="eight wide column">
+      <h1> {{redOverallScore}} </h1>
+    </div>
+    <div class="eight wide column score">
+      <h1> {{blueOverallScore}} </h1>
+    </div>
+</div>
+<div class="ui grid container">
+  <div class="column">
+    <p class="win-txt">{{whoIsWinning}}</p>
+  </div>
+</div>
+
+<div class="add-scores">
+  <!-- On the board | In the count -->
+  <div class="ui grid container">
+    <div class="eight wide column red-col">
+      <div class="ui three column grid">
+        <div class="column">
+          <i class="minus circle icon" (click)="addBags('m','count','r')" ></i>
+        </div>
+        <div class="column">
+          <div class="column"> {{redInCount}} </div>
+          <div class="column">In Count</div>
+        </div>
+        <div class="column">
+          <i class="plus circle icon" (click)="addBags('p','count','r')"></i>
+        </div>
+      </div>
+    </div>
+    <div class="eight wide column blue-col">
+      <div class="ui three column grid">
+        <div class="column">
+          <i class="minus circle icon" (click)="addBags('m','count','b')"></i>
+        </div>
+        <div class="column">
+          <div class="column"> {{blueInCount}} </div>
+          <div class="column">In Count</div>
+        </div>
+        <div class="column">
+          <i class="plus circle icon" (click)="addBags('p','count','b')"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- ======= In the Hole ======= -->
+  <div class="ui grid container">
+    <div class="eight wide column red-col">
+      <div class="ui three column grid">
+        <div class="column">
+          <i class="minus circle icon" (click)="addBags('m','hole','r')"></i>
+        </div>
+        <div class="column">
+          <div class="column"> {{redInHole}} </div>
+          <div class="column">In Hole</div>
+        </div>
+        <div class="column">
+          <i class="plus circle icon" (click)="addBags('p','hole','r')"></i>
+        </div>
+      </div>
+    </div>
+    <div class="eight wide column blue-col">
+      <div class="ui three column grid">
+        <div class="column">
+          <i class="minus circle icon" (click)="addBags('m','hole','b')"></i>
+        </div>
+        <div class="column">
+          <div class="column"> {{blueInHole}} </div>
+          <div class="column">In Hole</div>
+        </div>
+        <div class="column">
+          <i class="plus circle icon" (click)="addBags('p','hole','b')"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui grid container">
+    <button class="ui green button inning-btn" (click)="addToFinalScore()">New Inning&nbsp; <i class="plus icon"></i></button>
+    <button class="ui red button reset-btn" (click)="resetGame()">Reset Game&nbsp;
+      <i class="undo alternate icon"></i>
+    </button>
+  </div>
+</div>
